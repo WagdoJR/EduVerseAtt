@@ -10,6 +10,9 @@ Na Fase 3, a arquitetura foi evoluída para um modelo baseado em **Cloud e Micro
 
 ## Arquitetura (C4 - Containers)
 
+### Visual (Imagem)
+![Diagrama C4](docs/diagrams/DiagramC4.png)
+
 ```mermaid
 graph TD
 User --> Frontend
@@ -24,28 +27,6 @@ ContentService --> Database
 
 RecommendationService --> MessageBroker
 ```
-
----
-
-```md
-## Diagrama C4 - Containers
-
-### Visual (Imagem)
-![Diagrama C4](docs/diagrams/DiagramC4.png)
-
-### Código (Mermaid)
-```mermaid
-graph TD
-User --> Frontend
-Frontend --> APIGateway
-APIGateway --> UserService
-APIGateway --> RecommendationService
-APIGateway --> ContentService
-RecommendationService --> AIService
-UserService --> Database
-ContentService --> Database
-RecommendationService --> MessageBroker
-
 ---
 
 ## Estratégia de Cloud
